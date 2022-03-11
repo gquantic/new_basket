@@ -87,7 +87,7 @@ body {
     stroke: #3065B7;
 }
 
-.bakset-by-item {
+.basket-by-item {
     background: #fff;
     height: 164px;
     border: 1px solid #E0E0E0;
@@ -99,12 +99,12 @@ body {
     padding: 0 20px 0 20px;
 }
 
-.bakset-by-item div:nth-child(3) {
+.basket-by-item div:nth-child(3) {
     display: flex;
     flex-direction: column;
 }
 
-.bakset-by-item div:nth-child(3) input {
+.basket-by-item div:nth-child(3) input {
     background: rgba(48, 101, 183, 0.15);
     border-radius: 2px;
     border: none;
@@ -114,11 +114,52 @@ body {
     margin: 0 auto;
 }
 
-.bakset-by-item div:nth-child(3) span {
+.basket-by-item div:nth-child(3) span {
     margin-top: 9px;
 }
 
-.bakset-by-item div:nth-child(1) svg  {
+.basket-by-item div:nth-child(1) svg  {
     margin-right: 10px;
     margin-bottom: 10px;
+}
+
+.basket-footer {
+    border: 1px solid #E0E0E0;
+    background: #fff;
+    padding: 30px 20px 30px 20px;
+    border-radius: 4px;
+    margin-top: 13px;
+}
+
+.basket-footer h5 {
+    font-size: 15px;
+    color: #424242;
+}
+
+.basket-footer input {
+    height: 40px;
+    width: 270px;
+}
+
+.basket-footer a {
+    color: #3065B7;
+    font-size: 14px;
+    border-bottom: 1px solid;
+    text-decoration: none;
+}
+
+.basket-footer button {
+    height: 44px;
+    width: 183px;
+    border: none;
+    background: #3065B7;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.clear-basket-btn {
+}
+
+.basket-info {
+    height: 100px;
 }
