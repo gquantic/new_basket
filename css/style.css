@@ -1,0 +1,124 @@
+body {
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background: #E5E5E5;
+}
+
+*:focus {
+    outline: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.top-basket {
+    height: 50px;
+    background: #EEEEEE;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 2px;
+}
+
+.top-basket .breadcrumbs span {
+    margin: 0 12px 0 0;
+}
+
+.top-basket .search-input {
+    height: 26px;
+    width: 167px;
+    border: 1px solid #DAD9D9;
+    padding-left: 8px;
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.top-basket-body {
+    height: 107px;
+    background: #F9F9F9;
+    display: flex;
+    align-items: center;
+}
+
+.top-basket-items {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.top-basket-body::before {
+    content: "";
+    width: 940px;
+    height: 1px;
+    background: #969696;
+    position: absolute;
+    z-index: 0;
+}
+
+.top-basket-items .basket-item {
+    height: 74px;
+    width: 74px;
+    background: #EEEEEE;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    border: 2px solid rgba(0,0,0,0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-basket-items .basket-item svg {
+    stroke: #969696;
+    width: 32px;
+    height: 32px;
+}
+
+.top-basket-items .basket-item.active {
+    border: 2px solid #3065B7;
+    background: #fff;
+}
+
+.top-basket-items .basket-item.active svg {
+    stroke: #3065B7;
+}
+
+.bakset-by-item {
+    background: #fff;
+    height: 164px;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 9px;
+    padding: 0 20px 0 20px;
+}
+
+.bakset-by-item div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+}
+
+.bakset-by-item div:nth-child(3) input {
+    background: rgba(48, 101, 183, 0.15);
+    border-radius: 2px;
+    border: none;
+    text-align: center;
+    width: 39px;
+    height: 37px;
+    margin: 0 auto;
+}
+
+.bakset-by-item div:nth-child(3) span {
+    margin-top: 9px;
+}
+
+.bakset-by-item div:nth-child(1) svg  {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
