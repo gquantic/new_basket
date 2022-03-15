@@ -2,7 +2,7 @@ body {
     width: 940px;
     margin: 0 auto;
     margin-top: 100px;
-    background: #E5E5E5;
+    background: #F9F9F9;
 }
 
 *:focus {
@@ -59,7 +59,7 @@ body {
     z-index: 0;
 }
 
-.top-basket-items .basket-item {
+.top-basket-items .basket-item, .top-basket-items .basket-item-default  {
     height: 74px;
     width: 74px;
     background: #EEEEEE;
@@ -72,10 +72,11 @@ body {
     align-items: center;
 }
 
-.top-basket-items .basket-item svg {
-    stroke: #969696;
+.top-basket-items .basket-item svg, .top-basket-items .basket-item-default svg {
+    /*stroke: #969696;*/
     width: 32px;
     height: 32px;
+    fill: #969696;
 }
 
 .top-basket-items .basket-item.active {
@@ -84,7 +85,8 @@ body {
 }
 
 .top-basket-items .basket-item.active svg {
-    stroke: #3065B7;
+    fill: #3065B7 !important;
+    /*stroke: #3065B7 !important;*/
 }
 
 .basket-by-item {
@@ -150,7 +152,7 @@ body {
 
 .basket-footer button {
     height: 44px;
-    width: 183px;
+    width: 100%;
     border: none;
     background: #3065B7;
     color: #fff;
@@ -158,6 +160,7 @@ body {
 }
 
 .clear-basket-btn {
+
 }
 
 .basket-info {
