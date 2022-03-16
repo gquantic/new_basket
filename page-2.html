@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/order-form.css">
+
+    <script src="js/scripts.js"></script>
 </head>
 <body>
 <div class="row">
@@ -66,25 +68,82 @@
         <h5>Тип плательщика</h5>
         <div class="d-flex justify-content-start">
             <div class="radio-btn">
-                <input type="radio" name="people_type" value="person" id="person">
-                <label for="person">Физическое лицо</label>
+                <input type="radio" name="people_type" value="person" onchange="editType(this.getAttribute('value'))" id="person" checked>
+                <label for="person" class="not-required">Физическое лицо</label>
             </div>
             <div class="radio-btn">
-                <input type="radio" name="people_type" value="organisation" id="organisation">
-                <label for="organisation">Юридическое лицо</label>
+                <input type="radio" class="select_type" name="people_type" value="organisation" onchange="editType(this.getAttribute('value'))" id="organisation">
+                <label for="organisation" class="not-required">Юридическое лицо</label>
             </div>
         </div>
-        <div class="form-group mt-1">
-            <label for="" class="mb-2">ФИО</label>
-            <input type="text" placeholder="ФИО" oninput="this.className = ''">
+        <div class="person_block active">
+            <div class="form-group mt-1">
+                <label for="">ФИО</label>
+                <input type="text" placeholder="ФИО" oninput="this.className = ''">
+            </div>
+            <div class="form-group">
+                <label for="" class="mb-2">E-mail</label>
+                <input type="text" placeholder="Укажите ваш Е-mail" oninput="this.className = ''">
+            </div>
+            <div class="form-group">
+                <label for="" class="mb-2">Телефон</label>
+                <input type="text" placeholder="+7 (___) ___-__-__" oninput="this.className = ''">
+            </div>
         </div>
-        <div class="form-group">
-            <label for="" class="mb-2">E-mail</label>
-            <input type="text" placeholder="Укажите ваш Е-mail" oninput="this.className = ''">
-        </div>
-        <div class="form-group">
-            <label for="" class="mb-2">Телефон</label>
-            <input type="text" placeholder="+7 (___) ___-__-__" oninput="this.className = ''">
+        <!--
+            ORGANISATION
+        --->
+        <div class="organisation_block">
+            <div class="form-group mt-1">
+                <label for="" class="mb-2">ФИО</label>
+                <input type="text" placeholder="ФИО" oninput="this.className = ''">
+            </div>
+            <div class="form-group">
+                <label for="" class="mb-2">E-mail</label>
+                <input type="text" placeholder="Укажите ваш Е-mail" oninput="this.className = ''">
+            </div>
+            <div class="form-group">
+                <label for="" class="mb-2">Телефон</label>
+                <input type="text" placeholder="+7 (___) ___-__-__" oninput="this.className = ''">
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="form-group mt-1">
+                        <label for="" class="mb-2">ИНН</label>
+                        <input type="text" placeholder="ИНН" oninput="this.className = ''">
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="" class="mb-2">КПП</label>
+                        <input type="text" placeholder="КПП" oninput="this.className = ''">
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="" class="mb-2">Юридический адрес</label>
+                        <input type="text" placeholder="Юридический адрес" oninput="this.className = ''">
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="" class="mb-2">Фактический адрес</label>
+                        <input type="text" placeholder="Фактический адрес" oninput="this.className = ''">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="form-group mt-1">
+                        <label for="" class="mb-2">Факс</label>
+                        <input type="text" placeholder="Факс" oninput="this.className = ''">
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="" class="mb-2">Расчетный счет (р/с)</label>
+                        <input type="text" placeholder="Расчетный счет (р/с)" oninput="this.className = ''">
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="" class="mb-2">БИК</label>
+                        <input type="text" placeholder="БИК" oninput="this.className = ''">
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="" class="mb-2">Наименование банка</label>
+                        <input type="text" placeholder="Наименование банка" oninput="this.className = ''">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -698,11 +757,9 @@
         <span class="step"></span>
         <span class="step"></span>
     </div>
-
 </form>
 
 <script src="js/order-form.js"></script>
-
 
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
