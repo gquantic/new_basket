@@ -43,11 +43,5 @@ function setDisabled(blocks, attr) {
                 element.removeAttribute('disabled');
             }
         }
-
-        // if (attr === true) {
-        //     block.querySelector('.form-input').setAttribute('disabled', 'disabled');
-        // } else {
-        //     block.querySelector('.form-input').removeAttribute('disabled');
-        // }
     }
 }
