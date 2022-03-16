@@ -49,19 +49,22 @@ function validateForm() {
         // If a field is empty...
         console.log(y[i].getAttribute('disabled'));
 
-        if (y[i].getAttribute('disabled') == null && y[i].value == "") {
+        if (y[i].getAttribute('disabled') === null && y[i].value === "") {
             // add an "invalid" class to the field:
             y[i].className += " invalid";
             // and set the current valid status to false:
             valid = false;
         } else {
-            valid = false;
+            valid = true;
         }
     }
     // If the valid status is true, mark the step as finished and valid:
     if (valid) {
         document.getElementsByClassName("step")[currentTab].className += " finish";
     }
+
+    console.log(valid);
+
     return valid; // return the valid status
 }
 

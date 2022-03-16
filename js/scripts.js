@@ -2,7 +2,7 @@
 function editType(type) {
     let personBlocks = document.getElementsByClassName('person_block'),
         orgBlocks = document.getElementsByClassName('organisation_block'),
-        allBlocks = new Array();
+        allBlocks = [];
 
     for (let personBlock of personBlocks) {
         allBlocks.push(personBlock);
@@ -36,12 +36,18 @@ function editType(type) {
 // Сделать все поля блока неактивными
 function setDisabled(blocks, attr) {
     for (let block of blocks) {
-        for (let element of block.childNodes) {
+        for (let element of block.querySelectorAll('input')) {
             if (attr === true) {
                 element.setAttribute('disabled', 'disabled');
             } else {
                 element.removeAttribute('disabled');
             }
         }
+
+        // if (attr === true) {
+        //     block.querySelector('.form-input').setAttribute('disabled', 'disabled');
+        // } else {
+        //     block.querySelector('.form-input').removeAttribute('disabled');
+        // }
     }
 }
