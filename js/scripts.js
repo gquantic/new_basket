@@ -1,3 +1,10 @@
+document.addEventListener("DOMContentLoaded", () => {
+    /**
+     * Добавляем disabled сразу после загрузки
+     */
+    setDisabled(document.getElementsByClassName('organisation_block'), true);
+});
+
 // Отображение полей при смене типа лица
 function editType(type) {
     let personBlocks = document.getElementsByClassName('person_block'),
